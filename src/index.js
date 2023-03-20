@@ -31,7 +31,7 @@ function observerHandler(entries) {
 
       const result = await callToService(form.elements['searchQuery'].value, nextPage);
 
-      if(result) {
+      if(!result) {
         observer.unobserve(loadMore);
       }
     }
